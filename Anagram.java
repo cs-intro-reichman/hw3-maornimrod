@@ -28,9 +28,6 @@ public class Anagram {
 
 	// Returns true if the two given strings are anagrams, false otherwise.
 	public static boolean isAnagram(String str1, String str2) {
-		if(str1.length()!=str2.length()){
-			return false;
-		}
 		if(str1.isEmpty() && str2.isEmpty()){
 			return true;
 		}
@@ -48,9 +45,9 @@ public class Anagram {
 						break;
 					}
 				}
-			}
-			if(!anagram){
-				return false;
+				if(!anagram){
+					return false;
+				}
 			}
 		}
 		return true;

@@ -138,13 +138,11 @@ public class Algebra {
 		if(x==0 || x==1){
 			return x;
 		}
-		int i = 0;
-		int xsqrt = 1;
-		while(xsqrt!=x){
-			i++;
-			xsqrt = pow(i, 2);
+		int xsqrt = 0;
+		while(pow(xsqrt, 2)-x<0 && xsqrt<x){
+			xsqrt++;
 		}	
-		return i;
+		return xsqrt;
 	}
 
 }
