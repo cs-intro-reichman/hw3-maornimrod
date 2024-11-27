@@ -141,8 +141,11 @@ public class Algebra {
 		int xsqrt = 0;
 		while(pow(xsqrt, 2)-x<0 && xsqrt<x){
 			xsqrt++;
+		}
+		if(pow(xsqrt, 2) == x){
+			return xsqrt;
 		}	
-		return xsqrt;
+		return minus(xsqrt, 1);
 	}
 
 }
